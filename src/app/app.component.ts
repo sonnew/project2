@@ -24,7 +24,7 @@ export class AppComponent {
 
   editTask(list: string, task: Task): void {}
 
-  drop(event: CdkDragDrop<Task[]>, test: CdkDragDrop<Task[]>): void {
+  drop({ event, test }: { event: CdkDragDrop<Task[]>; test: CdkDragDrop<Task[]>; }): void {
     if (event.previousContainer === event.container) {
       return;
     }
